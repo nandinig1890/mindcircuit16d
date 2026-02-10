@@ -25,5 +25,5 @@ spec:
     spec:
       containers:
         - name: pubg-cont
-          image: dockerhub7890/nandu123:fbapp
+          image: nginx
           
