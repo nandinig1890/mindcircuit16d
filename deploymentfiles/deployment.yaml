@@ -1,4 +1,4 @@
----
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -6,24 +6,21 @@ metadata:
   labels:
     app: pubg-deploy
     env: lab
-
 spec:
+  replicas: 2
   selector:
     matchLabels:
       app: pubg-app
-    
-  replicas: 2
   template:
     metadata:
-      name: pubg-app-pod
-      labels: 
+      labels:
         app: pubg-app
         env: lab
         tier: frontend
         version: v1-ac
-
     spec:
       containers:
         - name: pubg-cont
           image: nginx
-          
+          ports:
+            - containerPort: 80
