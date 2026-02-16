@@ -21,6 +21,6 @@ spec:
     spec:
       containers:
         - name: pubg-cont
-          image: dockerhub7890/nandu123:6
+          image: dockerhub7890/nandu123:7
           ports:
             - containerPort: 80
