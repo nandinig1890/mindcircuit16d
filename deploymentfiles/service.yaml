@@ -8,7 +8,7 @@ spec:
   type: LoadBalancer
   ports:
     - port: 80          # browser access port
-      targetPort: 80    # nginx container port
+      targetPort: 8080    # nginx container port
       protocol: TCP
   selector:
     app: pubg-app
