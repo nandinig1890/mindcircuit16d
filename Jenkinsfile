@@ -19,7 +19,7 @@ pipeline {
      stage('my stage3 - deployment stage to tomact'){
        steps{
           echo 'deploy artifact to tomcat'   
-          deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat', path: '', url: 'http://ec2-3-91-35-94.compute-1.amazonaws.com:8080')], contextPath: 'my-greeting-holi', war: '**/*.war'               
+          deploy adapters: [tomcat9(alternativeDeploymentContext: '', path: '', url: 'http://ec2-3-91-35-94.compute-1.amazonaws.com:8080/')], contextPath: 'new-page', war: '**/*.war'               
             
        }
      }
